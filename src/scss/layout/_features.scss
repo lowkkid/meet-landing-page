@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.features {
+  padding-block-start: $spacing-400;
+  padding-block-end: $spacing-800;
+
+  @include flex-vertical($spacing-800);
+
+  @include tablet {
+    padding-block-start: $spacing-700;
+    padding-block-end: $spacing-900;
+  }
+}
+
+.features__images {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 24px;
+  }
+}
+
+.features__image {
+  width: 100%;
+  height: rem(144);
+
+  border-radius: 10px;
+
+  @include tablet {
+    height: rem(160);
+  }
+
+  @include desktop {
+    height: rem(256);
+  }
+}
+
+.features__content {
+  @include flex-vertical($spacing-400);
+
+  text-align: center;
+
+  @include tablet {
+    max-width: rem(504);
+  }
+
+  @include desktop {
+    max-width: rem(544);
+  }
+}
+
+.features__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}

@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.cta {
+  @include flex-vertical();
+}
+
+.cta__content {
+  margin-block-start: -28px;
+  padding: $spacing-800 0;
+  position: relative;
+  color: $white;
+
+  @include flex-vertical($spacing-300);
+
+  max-width: rem(504);
+
+  @include desktop {
+    padding: 112px 0;
+    max-width: 1120px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-image: url(/assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+
+    @include tablet {
+      background-image: url(/assets/tablet/image-footer.jpg);
+    }
+
+    @include desktop {
+      background-image: url(/assets/desktop/image-footer.jpg);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-color: rgba($cyan-600, 0.8);
+    z-index: -1;
+  }
+}
+
+.cta__title {
+  text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.cta__text {
+  text-align: center;
+
+  @include desktop {
+    text-align: left;
+    width: rem(355);
+  }
+}
+
+.cta__button {
+  padding: $spacing-200 $spacing-500;
+  background-color: $purple-600;
+  border-radius: 30px;
+
+  &:hover {
+    background-color: $purple-400;
+  }
+
+  @include desktop {
+    align-self: start;
+    width: rem(256);
+  }
+}
+
+.cta__app-version {
+  color: $purple-300;
+}

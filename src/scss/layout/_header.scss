@@ -1,0 +1,136 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.header__logo-container {
+  @include flex-vertical();
+
+  padding-block-start: $spacing-600;
+
+  @include desktop {
+    padding-block-start: $spacing-1000;
+  }
+}
+
+.header__hero {
+  padding-block-start: $spacing-800;
+  padding-block-end: $spacing-400;
+  @include flex-vertical();
+
+  @include tablet {
+    padding-block-end: $spacing-800;
+  }
+
+  @include desktop {
+    align-items: center;
+  }
+}
+
+.header__content {
+  @include flex-vertical($spacing-900);
+
+  @include tablet {
+    gap: $spacing-900;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 87.5%;
+    min-height: rem(360);
+    gap: $spacing-400;
+  }
+}
+
+.header__img-container {
+  display: none;
+  position: relative;
+
+  @include desktop {
+    display: block;
+    width: 100%;
+    min-height: rem(360);
+    align-self: stretch;
+  }
+}
+
+.header__intro {
+  @include flex-vertical($spacing-300);
+
+  text-align: center;
+
+  @include tablet {
+    max-width: 504px;
+  }
+
+  @include desktop {
+    flex-shrink: 0;
+    max-width: none;
+    grid-column: 2;
+  }
+}
+
+.header__img {
+  width: 140%;
+
+  @include tablet {
+    width: 120%;
+  }
+
+  @include desktop {
+    max-width: 480px;
+    width: 140%;
+    position: absolute;
+  }
+
+  &--left {
+    @include desktop {
+      top: 0;
+      right: 30%;
+    }
+  }
+
+  &--right {
+    @include desktop {
+      top: 0;
+      left: 30%;
+    }
+  }
+}
+
+.header__links {
+  @include flex-vertical($spacing-200, stretch);
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.header__link {
+  padding: em(16) em(40);
+  border-radius: 30px;
+  text-align: center;
+  color: $white;
+
+  span {
+    color: $cyan-300;
+  }
+
+  &--cyan {
+    background-color: $cyan-600;
+  }
+
+  &--cyan:hover {
+    background-color: $cyan-400;
+  }
+
+  &--purple {
+    background-color: $purple-600;
+  }
+
+  &--purple:hover {
+    background-color: $purple-400;
+  }
+}

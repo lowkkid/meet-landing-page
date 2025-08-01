@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+.text-preset-1 {
+  font-size: $mobile-font-size-xl;
+  font-weight: 900;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
+
+  @include tablet {
+    font-size: $tablet-font-size-xl;
+  }
+
+  @include desktop {
+    font-size: $desktop-font-size-xl;
+  }
+}
+
+.text-preset-2 {
+  font-size: $mobile-font-size-l;
+  font-weight: 900;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
+
+  @include tablet {
+    font-size: $tablet-font-size-l;
+  }
+
+  @include desktop {
+    font-size: $desktop-font-size-l;
+  }
+}
+
+.text-preset-3 {
+  font-size: $mobile-font-size-s;
+  font-weight: 900;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-wide;
+  color: $cyan-600;
+
+  @include tablet {
+    font-size: $tablet-font-size-s;
+  }
+
+  @include desktop {
+    font-size: $desktop-font-size-s;
+  }
+}
+
+.text-preset-4 {
+  font-size: $tablet-font-size-m;
+  font-weight: 500;
+  line-height: $line-height-loose;
+  letter-spacing: $letter-spacing-normal;
+
+  @include desktop {
+    font-size: $desktop-font-size-m;
+  }
+}
+
+.text-preset-5 {
+  font-size: $desktop-font-size-s;
+  font-weight: 900;
+  line-height: $line-height-loose;
+  letter-spacing: $letter-spacing-normal;
+}

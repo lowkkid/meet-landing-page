@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+body {
+  font-family: $font-family-main;
+  color: $state-900;
+  background-color: $white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  counter-reset: sections-counter;
+  padding: 0 $spacing-400;
+  overflow: hidden;
+
+  @include desktop {
+    padding: 0 $spacing-1000;
+  }
+}
+
+.section-counter {
+  counter-increment: sections-counter;
+
+  border-radius: 50%;
+  border: 1px solid $state-300;
+  color: $state-600;
+
+  width: $section-counter-size;
+  height: $section-counter-size;
+  margin-top: $section-counter-vertical-bar-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $white;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -$section-counter-vertical-bar-height;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1px;
+    height: $section-counter-vertical-bar-height;
+    background-color: $state-300;
+  }
+
+  &::after {
+    content: counter(sections-counter, decimal-leading-zero);
+  }
+}
+
+.mobile-img {
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+}
