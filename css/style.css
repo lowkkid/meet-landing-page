@@ -427,19 +427,19 @@ main {
   transform: translateX(-50%);
   width: 100vw;
   height: 100%;
-  background-image: url(/assets/mobile/image-footer.jpg);
+  background-image: url(../../../assets/mobile/image-footer.jpg);
   background-size: cover;
   background-position: center;
   z-index: -2;
 }
 @media (min-width: 48rem) {
   .cta__content::before {
-    background-image: url(/assets/tablet/image-footer.jpg);
+    background-image: url(../../../assets/tablet/image-footer.jpg);
   }
 }
 @media (min-width: 75rem) {
   .cta__content::before {
-    background-image: url(/assets/desktop/image-footer.jpg);
+    background-image: url(../../../assets/desktop/image-footer.jpg);
   }
 }
 .cta__content::after {

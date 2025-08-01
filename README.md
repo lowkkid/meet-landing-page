@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [GitHub Pages](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR)
+- Live Site URL: [GitHub Pages](https://lowkkid.github.io/meet-landing-page/)
 
 ## My process
 
